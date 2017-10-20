@@ -1,0 +1,11 @@
+/*!
+ Theme Name:   ARC - Virtue Child
+ Description:  Virtue Child Theme for the ARC site
+ Author:       David Cavins
+ Template:     virtue
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  virtue-child-arc
+*/h1 a.highlighter,h2 a.highlighter,h3 a.highlighter,h4 a.highlighter,h5 a.highlighter{text-decoration:none;border-bottom:1px solid rgba(56,116,168,.3);-webkit-box-shadow:0 -4px 0 rgba(56,116,168,.3) inset;box-shadow:inset 0 -4px 0 rgba(56,116,168,.3);-webkit-transition:border-bottom .25s,-webkit-box-shadow .25s;transition:border-bottom .25s,-webkit-box-shadow .25s;transition:border-bottom .25s,box-shadow .25s;transition:border-bottom .25s,box-shadow .25s,-webkit-box-shadow .25s}h1 a.highlighter:hover,h2 a.highlighter:hover,h3 a.highlighter:hover,h4 a.highlighter:hover,h5 a.highlighter:hover{text-decoration:none;border-bottom:1px solid rgba(56,116,168,.8);-webkit-box-shadow:0 -4px 0 rgba(56,116,168,.8) inset;box-shadow:inset 0 -4px 0 rgba(56,116,168,.8)}p a.highlighter{text-decoration:none;border-bottom:1px solid rgba(56,116,168,.3);-webkit-box-shadow:0 -2px 0 rgba(56,116,168,.3) inset;box-shadow:inset 0 -2px 0 rgba(56,116,168,.3);-webkit-transition:border-bottom .25s,-webkit-box-shadow .25s;transition:border-bottom .25s,-webkit-box-shadow .25s;transition:border-bottom .25s,box-shadow .25s;transition:border-bottom .25s,box-shadow .25s,-webkit-box-shadow .25s}p a.highlighter:hover{text-decoration:none;border-bottom:1px solid rgba(56,116,168,.8);-webkit-box-shadow:0 -2px 0 rgba(56,116,168,.8) inset;box-shadow:inset 0 -2px 0 rgba(56,116,168,.8)}.container .footerclass{background:url(images/blue-ridge-footer.png) no-repeat bottom}.sidebar-footer-logos{background-color:hsla(0,0%,100%,.4);padding-top:1.25em;padding-bottom:1.25em;border-top:1px solid #dadada;border-bottom:1px solid #dadada}.widget [class*=wp-image]{margin-left:0;margin-right:0}
+/*# sourceMappingURL=style.css.map */

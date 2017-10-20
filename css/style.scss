@@ -1,0 +1,52 @@
+/*!
+ Theme Name:   ARC - Virtue Child
+ Description:  Virtue Child Theme for the ARC site
+ Author:       David Cavins
+ Template:     virtue
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  virtue-child-arc
+*/
+h1, h2, h3, h4, h5, h5 {
+	a.highlighter {
+		text-decoration: none;
+		border-bottom: 1px solid hsla(208, 50%, 44%, 0.3);
+		box-shadow: 0 -4px 0 hsla(208, 50%, 44%, 0.3) inset;
+		transition: border-bottom .25s, box-shadow .25s;
+		&:hover {
+			text-decoration: none;
+			border-bottom: 1px solid hsla(208, 50%, 44%, 0.8);
+			box-shadow: 0 -4px 0 hsla(208, 50%, 44%, 0.8) inset;
+		}
+	}
+}
+p {
+	a.highlighter {
+		text-decoration: none;
+		border-bottom: 1px solid hsla(208, 50%, 44%, 0.3);
+		box-shadow: 0 -2px 0 hsla(208, 50%, 44%, 0.3) inset;
+		transition: border-bottom .25s, box-shadow .25s;
+		&:hover {
+			text-decoration: none;
+			border-bottom: 1px solid hsla(208, 50%, 44%, 0.8);
+			box-shadow: 0 -2px 0 hsla(208, 50%, 44%, 0.8) inset;
+		}
+	}
+}
+.container .footerclass {
+	background: url(images/blue-ridge-footer.png) no-repeat center bottom;
+	// background-size: cover;
+}
+.sidebar-footer-logos {
+	background-color: rgba( 255, 255, 255, 0.4);
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
+	border-top: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+}
+.widget [class*="wp-image"] {
+	margin-left: 0;
+	margin-right: 0;
+}
+
