@@ -37,6 +37,7 @@ p {
 .container .footerclass {
 	background: url(images/blue-ridge-footer.png) no-repeat center bottom;
 	// background-size: cover;
+	min-height: 300px;
 }
 .sidebar-footer-logos {
 	background-color: rgba( 255, 255, 255, 0.4);
@@ -49,4 +50,53 @@ p {
 	margin-left: 0;
 	margin-right: 0;
 }
+
+// Front page image with overlaying text
+// At smallest size, text appears below image.
+.cover-image {
+	.text-overlay {
+		.main-title {
+		}
+		.subtitle {
+			font-size: 1.4rem;
+			line-height: 1.4;
+		}
+
+	}
+}
+//Responsive line break - activates at certain widths.
+.rwd-break-600 {
+	display: none;
+}
+// At 600 we can do an overlay.
+@media screen and (min-width:600px), print {
+	//Responsive line break - activates at certain widths.
+	.rwd-break-600 {
+		display: inline;
+	}
+	.cover-image {
+		position: relative;
+		.text-overlay {
+			position: absolute;
+			bottom: 15%;
+			left: 1.8em;
+			right: 1.8em;
+			.main-title {
+				color: #ffffff;
+				font-size: 3.6rem;
+				line-height: 4.2rem;
+				text-shadow: 1px 1px 4px rgba( 0, 0, 0, .75 );
+			}
+			.subtitle {
+				color: #ffffff;
+				text-shadow: 1px 1px 4px rgba( 0, 0, 0, .75 );
+				font-size: 1.4rem;
+			}
+
+		}
+	}
+}
+
+
+
 
