@@ -16,3 +16,7 @@ function arc_register_sidebars() {
 	) );
 }
 add_action( 'widgets_init', 'arc_register_sidebars', 99 );
+
+add_filter( 'body_class', function( $classes ) {
+    return array_merge( $classes, array( 'arc-bright-spots' ) );
+} );
