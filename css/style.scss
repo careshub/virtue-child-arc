@@ -3,11 +3,22 @@
  Description:  Virtue Child Theme for the ARC site
  Author:       David Cavins
  Template:     virtue
- Version:      1.0.0
+ Version:      1.0.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  virtue-child-arc
 */
+// Colors
+$arc-blue-1: #0a5981;
+$arc-blue-2: #4680a5;
+$arc-blue-3: #7ca7c5;
+$arc-blue-4: #b6cfe0;
+$arc-blue-5: #00496E;
+$arc-orange: #ef8a62;
+$arc-green: #93DE76;
+$arc-lt-violet: #9B96EC; 
+$arc-violet: #8481D2;
+
 h1, h2, h3, h4, h5, h5 {
 	a.highlighter {
 		text-decoration: none;
@@ -89,6 +100,40 @@ p {
 	max-width: 100%;
 	padding-right: 0;
 	padding-left: 0;
+}
+.arc-bright-spots #cdt table {
+	td,
+	th {
+		font-size: 14px;
+	}
+}
+.arc-bright-spots tr.section-on {
+	background-color:#ededed;
+}
+.arc-bright-spots tr.highlight {
+	font-weight: 700;
+}
+
+.arc-bright-spots  { 
+	// Color of the bars in a bar chart
+	.highcharts-bar-series .highcharts-point {
+		fill: $arc-blue-4;
+		&.county_value {
+			fill: $arc-blue-5;
+		}
+	}
+	// .highcharts-grid-line {
+	// 	stroke: #FAB;
+	// }
+	.highcharts-xaxis-labels .county-label {
+		color: #000;
+		font-weight: 700;
+	}
+	// Tables
+	.cdt-table .arc-county {
+		// font-weight: 700;
+		background-color: lighten( $arc-blue-4, 16% );
+	}
 }
 
 // At 600 we can do an overlay.

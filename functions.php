@@ -20,3 +20,15 @@ add_action( 'widgets_init', 'arc_register_sidebars', 99 );
 add_filter( 'body_class', function( $classes ) {
     return array_merge( $classes, array( 'arc-bright-spots' ) );
 } );
+
+/**
+ * Enqueue scripts and styles.
+ *
+ * @since 1.0.1
+ */
+function virtue_child_arc_scripts() {
+	// Include the needed js file.
+	wp_enqueue_script( 'virtue-child-arc-base-scripts', get_theme_file_uri( '/js/public.js' ), array( 'jquery' ), '1.0.1', true );
+}
+add_action( 'wp_enqueue_scripts', 'virtue_child_arc_scripts' );
+
