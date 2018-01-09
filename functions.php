@@ -32,3 +32,22 @@ function virtue_child_arc_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'virtue_child_arc_scripts' );
 
+/**
+ * Don't show the footer logo bar on the about page.
+ *
+ * @since 1.0.0
+ *
+ * @param array     $instance The current widget instance's settings.
+ * @param WP_Widget $widget   The current widget instance.
+ * @param array     $args     An array of default widget arguments.
+ */
+function arc_hide_logo_bar_on_about_page( $instance, $widget, $args ) {
+
+	if ( 'footer_logos_bar' === $args['id'] && is_page( 'about' ) ) {
+		return false;
+	}
+
+	return $instance;
+
+}
+add_filter( 'widget_display_callback', 'arc_hide_logo_bar_on_about_page', 10, 3 );
