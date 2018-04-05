@@ -74,4 +74,31 @@ function arc_hide_logo_bar_on_about_page( $instance, $widget, $args ) {
 }
 add_filter( 'widget_display_callback', 'arc_hide_logo_bar_on_about_page', 10, 3 );
 
+/**
+ * Add the Google "noscript" tag immediately after the opening of the body element.
+ *
+ * @since 1.0.0
+ *
+ */
+function arc_add_google_tag_manager_noscript_tag() {
+	?>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQGZB4S"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<?php
+}
+add_action( 'virtue_after_body', 'arc_add_google_tag_manager_noscript_tag' );
 
+function arc_add_google_tag_manager_script() {
+	?>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PQGZB4S');</script>
+	<!-- End Google Tag Manager -->
+	<?php
+}
+add_action( 'wp_head', 'arc_add_google_tag_manager_script' );
