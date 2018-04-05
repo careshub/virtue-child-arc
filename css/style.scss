@@ -16,7 +16,7 @@ $arc-blue-4: #b6cfe0;
 $arc-blue-5: #00496E;
 $arc-orange: #ef8a62;
 $arc-green: #93DE76;
-$arc-lt-violet: #9B96EC; 
+$arc-lt-violet: #9B96EC;
 $arc-violet: #8481D2;
 
 h1, h2, h3, h4, h5, h5 {
@@ -114,7 +114,7 @@ p {
 	font-weight: 700;
 }
 
-.arc-bright-spots  { 
+.arc-bright-spots  {
 	// Color of the bars in a bar chart
 	.highcharts-bar-series .highcharts-point {
 		fill: $arc-blue-4;
@@ -136,6 +136,32 @@ p {
 	}
 }
 
+// Key Findings page
+.key-finding-section {
+	margin-bottom: 4em;
+	.aligncenter,
+	.alignnone {
+		margin-top: 2em;
+	}
+	.bar-chart-container {
+		margin-top: 2em;
+	}
+	.section-header {
+
+	}
+}
+.in-page-navigation {
+	a {
+		display: inline-block;
+		width: 100%;
+		padding: .2em .8em;
+		background-color: lighten( $arc-blue-4, 16% );
+		transition: all .25s;
+		&:hover {
+			background-color: lighten( $arc-blue-4, 6% );
+		}
+	}
+}
 // At 600 we can do an overlay.
 @media screen and (min-width:600px), print {
 	//Responsive line break - activates at certain widths.

@@ -18,7 +18,13 @@ function arc_register_sidebars() {
 add_action( 'widgets_init', 'arc_register_sidebars', 99 );
 
 add_filter( 'body_class', function( $classes ) {
-    return array_merge( $classes, array( 'arc-bright-spots' ) );
+	$add = array( 'arc-bright-spots' );
+	if ( is_page( 'key-issues' ) ) {
+
+	}
+    $classes = array_unique( array_merge( $classes, $add ) );
+
+    return $classes;
 } );
 
 /**
@@ -34,6 +40,16 @@ function virtue_child_arc_scripts() {
 	if ( is_page( array( 'report', 'interactive-report' ) ) ) {
 		wp_dequeue_script( 'virtue_plugins' );
 		wp_enqueue_script( 'virtue-plugins-alt', get_theme_file_uri( '/js/virtue-alt-plugins.js' ), array( 'jquery' ), '1.0.1', true );
+	}
+
+	if ( is_page( array( 'key-issues', 'key-findings' ) ) ) {
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			$highcharts_url = 'https://code.highcharts.com/highcharts.src.js';
+		} else {
+			$highcharts_url = 'https://code.highcharts.com/highcharts.js';
+		}
+		wp_enqueue_script( 'highcharts', $highcharts_url, array(), '5.0.7', true );
+		wp_enqueue_script( 'bar-chart-builder', get_theme_file_uri( '/js/bar-chart-builder.js' ), array( 'jquery', 'highcharts' ), '1.0.1', true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'virtue_child_arc_scripts', 999 );
