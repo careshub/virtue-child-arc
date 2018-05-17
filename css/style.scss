@@ -195,6 +195,11 @@ p {
 	}
 }
 
+//Bootstrap 3 vs 4 conflict:
+.kad-nav-collapse.show {
+	height: auto;
+}
+
 
 
 
