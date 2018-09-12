@@ -135,7 +135,140 @@ p {
 		background-color: lighten( $arc-blue-4, 16% );
 	}
 }
+// Bright Spots overview/archive
+.bright-spots-location-map-container {
+	border: 1px solid $arc-blue-3;
+	.leaflet-control-custom {
+		background-image: url(images/icons/reset.png);
+		// background-color: #f1b82d;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.bright-spots-list {
+	margin-top: 2em;
+	.bright-spot-item {
+		display: block;
+		overflow: auto;
+		padding: 1em;
+		border-bottom: 1px solid $arc-blue-3;
+		&:first-of-type {
+			border-top: 1px solid $arc-blue-3;
+		}
+	}
+	.post-thumbnail-container {
+		float: left;
+		margin-right: 2em;
+	}
+	.post-thumbnail.map-view {
+		display: none;
+	}
+	.bright-spot-content {
+		// float: left;
+		// margin-left: 2em;
+	}
+}
 
+.bright-spot-highlight {
+	height: 500px;
+	overflow-y: scroll;
+	background-color: lighten( $arc-blue-4, 16% );
+
+	.post-thumbnail.list-view {
+		display: none;
+	}
+	.cell-liner {
+		padding: 1em;
+	}
+	.bright-spot-content {
+	}
+}
+
+// Viewing a single Bright Spot
+.single-arc_bright_spot {
+	.photo-header {
+		position: relative;
+		margin-bottom: 2.4em;
+
+		.single-bright-spot-title {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.5));
+			padding: .4em 1em;
+			margin: 0;
+			color: white;
+			text-shadow: 0px 0px 6px #000000;
+		}
+	}
+
+
+	blockquote {
+		padding: 1.2em 2em;
+		background-color: lighten( $arc-blue-4, 16 );
+		// color: white;
+		border-color: $arc-blue-1;
+
+		p {
+			line-height: 1.4;
+		}
+		.attribution {
+			display: block;
+			color: $arc-blue-1;
+			// text-align: right;
+			margin-top: 1em;
+		}
+	}
+	.wp-caption-text {
+		font-size: .9em;
+		line-height: 1.4em;
+		text-align: left;
+		padding: .6em;
+		background-color: lighten( $arc-blue-4, 16 );
+	}
+}
+
+// The big number pane on a bright spot
+.data-cards .cell-liner {
+
+}
+.data-card-container {
+	background-color: $arc-blue-1;
+	border-radius: 3px;
+	padding-bottom: 4px;
+	border: 1px solid $arc-blue-2;
+	.cabs-big-number-container {
+		color: white;
+		text-align: center;
+		padding-bottom: .2em;
+		.cabs-data-card-title {
+			color: white;
+			font-size: 1.4em;
+			margin-top: 0;
+		}
+	}
+	.cabs-big-number {
+		font-size: 3.6em;
+		margin: .3em 0;
+		display: block;
+		color: lighten( $arc-blue-4, 4 );
+	}
+	.cabs-big-number-legend {
+		display: block;
+	}
+	.highcharts-point:first-of-type {
+		fill: $arc-blue-2;
+	}
+	.cabs-big-number-chart {
+		background-color: white;
+		.highcharts-container {
+			.highcharts-background {
+				fill: none;
+			}
+		}
+	}
+}
 // Key Findings page
 .key-finding-section {
 	margin-bottom: 4em;
