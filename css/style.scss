@@ -336,6 +336,33 @@ p {
 	height: auto;
 }
 
+// Bright spots integration.
+.abs-disparities-report-link {
+	background-color: lighten( $arc-blue-4, 16% );
+	margin-bottom: 1em;
+	padding: 1em 1em 1em 60px;
+	position: relative;
+	img {
+		width: 36px;
+		height: 36px;
+		display: inline;
+		vertical-align: middle;
+		margin-left: -42px;
+	}
+	.link-text {
+		line-height: 1.2;
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: 6px;
+	}
+}
+@media screen and (min-width:480px), print {
+	.abs-disparities-report-link {
+		max-width: 33%;
+		float: right;
+		margin-left: 1em;
+	}
+}
 
 
 
