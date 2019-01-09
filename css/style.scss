@@ -230,6 +230,21 @@ p {
 		padding: .6em;
 		background-color: lighten( $arc-blue-4, 16 );
 	}
+	table {
+		tr {
+			th {
+				&.numeric-column {
+					text-align: right;
+				}
+			}
+			td {
+				&.numeric-column {
+					text-align: right;
+					font-family: monospace,monospace;
+				}
+			}
+		}
+	}
 }
 
 // The big number pane on a bright spot
