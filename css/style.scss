@@ -45,6 +45,17 @@ p {
 		}
 	}
 }
+a.highlighter {
+	text-decoration: none;
+	border-bottom: 1px solid hsla(208, 50%, 44%, 0.3);
+	box-shadow: 0 -2px 0 hsla(208, 50%, 44%, 0.3) inset;
+	transition: border-bottom .25s, box-shadow .25s;
+	&:hover {
+		text-decoration: none;
+		border-bottom: 1px solid hsla(208, 50%, 44%, 0.8);
+		box-shadow: 0 -2px 0 hsla(208, 50%, 44%, 0.8) inset;
+	}
+}
 .container .footerclass {
 	background: url(images/blue-ridge-footer-ltx1800.png) no-repeat center bottom;
 	// background-size: cover;
@@ -138,6 +149,9 @@ p {
 // Bright Spots overview/archive
 .bright-spots-location-map-container {
 	border: 1px solid $arc-blue-3;
+}
+.leaflet-container {
+	// min-height: 350px;
 	.leaflet-control-custom {
 		background-image: url(images/icons/reset.png);
 		// background-color: #f1b82d;
@@ -148,12 +162,10 @@ p {
 .bright-spots-list {
 	margin-top: 2em;
 	.bright-spot-item {
-		display: block;
-		overflow: auto;
-		padding: 1em;
-		border-bottom: 1px solid $arc-blue-3;
-		&:first-of-type {
-			border-top: 1px solid $arc-blue-3;
+		.cell-liner {
+			padding: 1em;
+			border: 1px solid #ddd;
+			height: 100%;
 		}
 	}
 	.post-thumbnail-container {
@@ -163,16 +175,13 @@ p {
 	.post-thumbnail.map-view {
 		display: none;
 	}
-	.bright-spot-content {
-		// float: left;
-		// margin-left: 2em;
-	}
 }
 
 .bright-spot-highlight {
-	height: 500px;
+	height: 350px;
 	overflow-y: scroll;
 	background-color: lighten( $arc-blue-4, 16% );
+	border-left: 1px solid $arc-blue-3;
 	transition: width 0.3s ease-out;
 	.post-thumbnail.list-view {
 		display: none;
@@ -185,6 +194,28 @@ p {
 }
 .bright-spots-location-map-container .bright-spot-highlight.collapsed {
 	width: 0%;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+	padding: 6px 8px;
+	// font: 14px/16px Arial, Helvetica, sans-serif;
+	background: white;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	border-radius: 2px;
+}
+.legend .swatch {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+.legend-item:first-of-type {
+	margin-bottom: .4em;
+	display: block;
 }
 
 // Viewing a single Bright Spot
@@ -216,6 +247,10 @@ p {
 		p {
 			line-height: 1.4;
 		}
+		footer {
+			color: $arc-blue-1;
+			margin-top: 1em;
+		}
 		.attribution {
 			display: block;
 			color: $arc-blue-1;
@@ -229,6 +264,15 @@ p {
 		text-align: left;
 		padding: .6em;
 		background-color: lighten( $arc-blue-4, 16 );
+	}
+
+	.entry-content .green-highlight {
+		background-color: #e2eed9;
+	}
+
+	.leaflet-container {
+		margin-bottom: 2em;
+		margin-top: 1em;
 	}
 	table {
 		tr {
