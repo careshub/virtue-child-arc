@@ -272,6 +272,48 @@ p {
 		}
 	}
 }
+.data-card-container-ribbon {
+	background-color: $arc-blue-1;
+	border-radius: 3px;
+	// padding-bottom: 4px;
+	border: 1px solid $arc-blue-2;
+	.cabs-big-number-container {
+		color: white;
+		text-align: center;
+		padding-bottom: .2em;
+		.cabs-data-card-title {
+			color: white;
+			font-size: 1.4em;
+			line-height: 1.25;
+			margin-top: .4em;
+		}
+		.single-indicator-report-link {
+			color: lighten( $arc-blue-4, 4 );
+			font-size: .9em;
+			text-decoration: underline;
+		}
+	}
+	.cabs-big-number {
+		font-size: 3.6em;
+		margin: .3em 0;
+		display: block;
+		color: lighten( $arc-blue-4, 4 );
+	}
+	.cabs-big-number-legend {
+		display: block;
+	}
+	.highcharts-point:first-of-type {
+		fill: $arc-blue-2;
+	}
+	.cabs-big-number-chart {
+		background-color: white;
+		.highcharts-container {
+			.highcharts-background {
+				fill: none;
+			}
+		}
+	}
+}
 // Key Findings page
 .key-finding-section {
 	margin-bottom: 4em;
