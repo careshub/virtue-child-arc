@@ -314,6 +314,80 @@ p {
 		}
 	}
 }
+
+// In-page nav on bright spot.
+.scroll-nav {
+  position: absolute;
+  // width: 100%;
+}
+.scroll-nav.fixed .scroll-nav__wrapper {
+  position: fixed;
+  top: 60px;
+}
+
+.scroll-nav__wrapper {
+  border: 1px solid $arc-blue-4;
+  background-color: lighten( $arc-blue-4, 16 );
+  border-radius: 2px;
+  padding: 10px 5px;
+}
+
+.scroll-nav__heading {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  display: block;
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  text-shadow: 0 -1px 0 #006186;
+}
+.scroll-nav__heading:before {
+  // font-size: 40px;
+}
+
+.scroll-nav__list,
+.scroll-nav__sub-list {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.scroll-nav__item {
+  font-weight: 400;
+  // font-size: 30px;
+  line-height: 1.2em;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 200px;
+  // width: 100%;
+}
+.scroll-nav__item:before {
+  color: #000;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  text-align: center;
+  // width: 40px;
+}
+.scroll-nav__item.active {
+  transform: scale(1.15, 1.15);
+  font-weight: 800;
+}
+.scroll-nav__item.active a:hover {
+  // font-weight: 800;
+}
+.scroll-nav__link {
+  // color: #ccc;
+  display: block;
+  margin: 0 auto 1em;
+}
+.scroll-nav__link:hover {
+  // color: #ccc;
+}
+
 // Key Findings page
 .key-finding-section {
 	margin-bottom: 4em;
