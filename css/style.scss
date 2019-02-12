@@ -3,7 +3,7 @@
  Description:  Virtue Child Theme for the ARC site
  Author:       David Cavins
  Template:     virtue
- Version:      1.0.1
+ Version:      1.0.2
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  virtue-child-arc
@@ -18,6 +18,7 @@ $arc-orange: #ef8a62;
 $arc-green: #93DE76;
 $arc-lt-violet: #9B96EC;
 $arc-violet: #8481D2;
+$arc-header-blue: #143775;
 
 h1, h2, h3, h4, h5, h5 {
 	a.highlighter {
@@ -32,6 +33,16 @@ h1, h2, h3, h4, h5, h5 {
 		}
 	}
 }
+.virtue-child-arc .entry-content  {
+	h1, h2, h3,	h4 {
+		margin-top: 2%;
+		margin-bottom: 1.2%;
+	}
+	h2:first-of-type {
+		margin-top: 0;
+	}
+}
+
 p {
 	a.highlighter {
 		text-decoration: none;
@@ -54,6 +65,16 @@ a.highlighter {
 		text-decoration: none;
 		border-bottom: 1px solid hsla(208, 50%, 44%, 0.8);
 		box-shadow: 0 -2px 0 hsla(208, 50%, 44%, 0.8) inset;
+	}
+}
+.headerclass {
+	border-bottom: 2px solid hsla(208, 50%, 44%, 0.3);
+	padding-bottom: .5em;
+	#logo {
+		padding-top: 1em;
+	}
+	#nav-main {
+		margin-top: 1.5em;
 	}
 }
 .container .footerclass {
@@ -106,6 +127,41 @@ a.highlighter {
 	display: none;
 }
 
+.cta-button {
+	padding: 12px 18px;
+	font-size: 1.1em;
+	// border: none;
+	display: inline-block;
+	background-color: lighten( $arc-blue-4, 10 );
+	// color: white;
+	transition: all .6s ease-out;
+	border-bottom: 4px solid $arc-blue-3;
+	&:hover,
+	&:active {
+		background-color: lighten( $arc-blue-4, 3 );
+		// box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2)
+	}
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		border-top: 6px solid transparent;
+		border-bottom: 6px solid transparent;
+		border-left: 8px solid rgba(124,167,197,.9);
+		display: inline-block;
+		margin-left: 6px;
+	}
+}
+// .linkjet {
+// 	width: 0;
+// 	height: 0;
+// 	border-top: 6px solid transparent;
+// 	border-bottom: 6px solid transparent;
+// 	border-left: 8px solid rgba(124,167,197,.9);
+// 	display: inline-block;
+// 	margin-left: 6px;
+// }
+
 // Reporting interface
 .arc-bright-spots #cdt .cdt-chart {
 	max-width: 100%;
@@ -149,9 +205,15 @@ a.highlighter {
 // Bright Spots overview/archive
 .bright-spots-location-map-container {
 	border: 1px solid $arc-blue-3;
+	.leaflet-container {
+		border-top: none;
+		border-left: none;
+		border-bottom: none;
+	}
 }
 .leaflet-container {
 	// min-height: 350px;
+	border: 1px solid $arc-blue-3;
 	.leaflet-control-custom {
 		background-image: url(images/icons/reset.png);
 		// background-color: #f1b82d;
@@ -483,23 +545,44 @@ a.highlighter {
 		position: relative;
 		.text-overlay {
 			position: absolute;
-			bottom: 15%;
+			bottom: 0;
 			left: 1.8em;
 			right: 1.8em;
+			padding-bottom: 1.8em;
 			.main-title {
 				color: #ffffff;
 				font-size: 3.6rem;
 				line-height: 4.2rem;
-				text-shadow: 1px 1px 8px rgba( 0, 0, 0, .75 );
+				text-shadow: 1px 1px 6px rgba( 0, 0, 0, 1 );
+				background-color: rgba( $arc-blue-5, .85 );
+				padding: 8px 16px;
+				display: inline-block;
+				margin-bottom: 0;
 			}
 			.subtitle {
 				color: #ffffff;
-				text-shadow: 1px 1px 6px rgba( 0, 0, 0, .75 );
-				font-size: 1.4rem;
+				text-shadow: 1px 1px 6px rgba( 0, 0, 0, 1 );
+				font-size: 1.6rem;
+				background-color: rgba( 0, 0, 0, .5 );
+				background-color: rgba( $arc-blue-5, .85);
+				padding: 8px 16px;
+				display: inline-block;
+				margin-bottom: 0;
+				margin-top: 1em;
 			}
 
 		}
 	}
+
+	.hero-section {
+		// padding-left: 1.5em;
+		// padding-right: 1.5em;
+		margin-bottom: 2.5em;
+		&.disparities {
+			// background-color: rgba( $arc-blue-5, .5);
+		}
+	}
+
 	// Map interface
 	.cdt-fullwidth.maps .container {
 		width: auto;
