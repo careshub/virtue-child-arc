@@ -101,3 +101,13 @@ function arc_add_google_tag_manager_script() {
 	<?php
 }
 add_action( 'wp_head', 'arc_add_google_tag_manager_script' );
+
+// Output the content of the "News & Updates" page above the blog hosted on that page.
+// Add content of page called "blog" to the page that contains the list of blog posts
+add_action  ( 'virtue_before_blog_loop', 'add_blog_page_content_before_post_list');
+function add_blog_page_content_before_post_list() {
+	if ( is_home() ) {
+		$post = get_page_by_path( '/blog-introduction' );
+		echo '<div class="blog-introduction">' . wpautop( $post->post_content ) . '</div>';
+	}
+}

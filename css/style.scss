@@ -77,6 +77,12 @@ a.highlighter {
 		margin-top: 1.5em;
 	}
 }
+.blog-introduction {
+	background-color: lighten( $arc-blue-4, 17 );
+	border: 1px solid $arc-blue-4;
+	margin-bottom: 1.4em;
+	padding: .5em 1em 0;
+}
 .container .footerclass {
 	background: url(images/blue-ridge-footer-ltx1800.png) no-repeat center bottom;
 	// background-size: cover;
