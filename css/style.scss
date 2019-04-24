@@ -37,10 +37,13 @@ h1, h2, h3, h4, h5, h5 {
 	h1, h2, h3,	h4 {
 		margin-top: 2%;
 		margin-bottom: 1.2%;
+		&.scroll-section-header {
+			margin-top: 4%;
+		}
 	}
-	h2:first-of-type {
-		margin-top: 0;
-	}
+	// h2:first-of-type {
+	// 	margin-top: 0;
+	// }
 }
 
 p {
@@ -157,6 +160,9 @@ a.highlighter {
 		display: inline-block;
 		margin-left: 6px;
 	}
+}
+.home .cta-button {
+	width: 100%;
 }
 // .linkjet {
 // 	width: 0;
@@ -281,9 +287,20 @@ a.highlighter {
     margin-right: 8px;
     opacity: 0.7;
 }
-.legend-item:first-of-type {
-	margin-bottom: .4em;
+// .legend-item:first-of-type {
+// 	margin-bottom: .4em;
+// 	display: block;
+// }
+.legend-item {
 	display: block;
+}
+
+.wp-caption-text {
+	font-size: .9em;
+	line-height: 1.4em;
+	text-align: left;
+	padding: .6em;
+	background-color: lighten( $arc-blue-4, 16 );
 }
 
 // Viewing a single Bright Spot
@@ -326,13 +343,7 @@ a.highlighter {
 			margin-top: 1em;
 		}
 	}
-	.wp-caption-text {
-		font-size: .9em;
-		line-height: 1.4em;
-		text-align: left;
-		padding: .6em;
-		background-color: lighten( $arc-blue-4, 16 );
-	}
+
 
 	.entry-content .green-highlight {
 		background-color: #e2eed9;
@@ -442,7 +453,16 @@ a.highlighter {
 	}
 }
 
+// Bar charts on issue briefs
+.issue-bar-chart {
+
+	.highcharts-container {
+		height: 350px;
+	}
+}
+
 // In-page nav on bright spot.
+
 .scroll-nav {
   position: absolute;
   // width: 100%;
@@ -594,7 +614,7 @@ a.highlighter {
 	.hero-section {
 		// padding-left: 1.5em;
 		// padding-right: 1.5em;
-		margin-bottom: 2.5em;
+		margin-bottom: 3.5em;
 		&.disparities {
 			// background-color: rgba( $arc-blue-5, .5);
 		}
@@ -684,3 +704,52 @@ ol.bsid-methodology {
 	}
 }
 
+// Issue Briefs
+.map-container {
+	background-color: lighten( $arc-blue-4, 15 );
+	padding: .5em .5em 0;
+	margin-bottom: 1.4em;
+	.map-source-description {
+		font-size: .9em;
+		margin-bottom: 0;
+		margin-top: .25em;
+	}
+	.map-title {
+		margin-top: 0 !important;
+	}
+}
+.issue-bar-chart {
+	border: 1px solid $arc-blue-2;
+	margin-bottom: 1em;
+	.cabs-data-card-title {
+		padding: .25em .5em;
+		font-size: 1.2em;
+		background-color: $arc-blue-1;
+		color: white;
+		margin-top: 0 !important;
+	}
+	.issue-chart {
+		margin: 0 .5em .25em;
+	}
+}
+.issue-brief-additional-resources {
+	background-color: lighten( $arc-blue-4, 17 );
+	border: 1px solid $arc-blue-4;
+	padding: .5em;
+	margin-bottom: 1.4em;
+	.additional-resources-title {
+		margin-top: 0 !important;
+	}
+}
+.page-header {
+	.subtitle {
+		font-size: 1.2em;
+	}
+}
+
+.call-out-box {
+	background-color: lighten( $arc-blue-4, 17 );
+	border: 1px solid $arc-blue-4;
+	padding: .5em;
+	margin-bottom: 1.4em;
+}
