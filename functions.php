@@ -14,6 +14,16 @@ function arc_register_sidebars() {
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	) );
+
+	// A scroll nav target sidebar
+	register_sidebar( array(
+		'name' => __('Scroll Sidebar', 'virtue'),
+		'id' => 'scroll_nav_sidebar',
+		'before_widget' => '<div class="scroll_nav_sidebar_container">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'arc_register_sidebars', 99 );
 
