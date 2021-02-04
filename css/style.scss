@@ -470,6 +470,8 @@ a.highlighter {
 .scroll-nav.fixed .scroll-nav__wrapper {
   position: fixed;
   top: 10px;
+  max-height: 95vh; // Don't let the fixed position item be longer than the page.
+  overflow-y: scroll;
 }
 
 .scroll-nav__wrapper {
